@@ -41,3 +41,6 @@ JSONP是服务器与客户端跨源通信的常用方法。最大特点就是简
 
 ![image](https://user-images.githubusercontent.com/24493052/27994481-cf853798-64f1-11e7-9593-f7110005278a.png)
 
+![image](https://user-images.githubusercontent.com/24493052/27994510-2f00d812-64f2-11e7-8ed9-1e852993c8b6.png)
+
+### 方式三：CORS
