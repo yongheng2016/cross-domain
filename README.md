@@ -64,5 +64,12 @@ Origin: http://a.com:8888  //夹带的origin头信息，表明身份
 response.setHeader('Access-Control-Allow-Origin', 'http://a.com:8888');  // 对'http://a.com:8888'此地址放行
 
 ```
-3.
+3.浏览器看到`Access-Control-Allow-Origin: http://a.com:8888`后，就认可此操作合法；
 
+![image](https://user-images.githubusercontent.com/24493052/27994647-821fbec6-64f4-11e7-9308-f40426687956.png)
+
+---
+
++ [阮一峰：浏览器同源政策及其规避方法](http://www.ruanyifeng.com/blog/2016/04/same-origin-policy.html)
+
++ [阮一峰：跨域资源共享 CORS 详解](http://www.ruanyifeng.com/blog/2016/04/cors.html)
