@@ -19,10 +19,12 @@ postMessage是HTML5引入的新API：跨文档通信API（Cross-document messagi
 ![image](https://user-images.githubusercontent.com/24493052/27994286-3db75106-64ed-11e7-92d8-74123bb5ed64.png)
 
 
-+ 父窗口和子窗口分别通过`postMessage`方法向对方发送消息
+1. 父窗口和子窗口分别通过`postMessage`方法向对方发送消息
 
 ```
 xxx.postMessage('input.value','接收消息的origin')
 ```
 
 ![image](https://user-images.githubusercontent.com/24493052/27994322-13f00592-64ee-11e7-8d8f-cee6fe11487c.png)
+
+2. 父窗口和子窗口分别通过监听message事件event.data来获取消息内容，对自己的input.value进行同步操作
