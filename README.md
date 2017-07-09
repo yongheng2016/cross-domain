@@ -39,4 +39,5 @@ window.addEventListener('message', function (e){
 JSONP是服务器与客户端跨源通信的常用方法。最大特点就是简单适用，老式浏览器全部支持，服务器改造非常小。
 它的基本思想是，网页通过添加一个<script>元素，向服务器请求JSON数据，这种做法不受同源政策限制；服务器收到请求后，将数据放在一个指定名字的回调函数里传回来。
 
+![image](https://user-images.githubusercontent.com/24493052/27994481-cf853798-64f1-11e7-9593-f7110005278a.png)
 
