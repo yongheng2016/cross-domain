@@ -44,3 +44,6 @@ JSONP是服务器与客户端跨源通信的常用方法。最大特点就是简
 ![image](https://user-images.githubusercontent.com/24493052/27994510-2f00d812-64f2-11e7-8ed9-1e852993c8b6.png)
 
 ### 方式三：CORS
+CORS是一个W3C标准，全称是"跨域资源共享"（Cross-origin resource sharing）。
+它允许浏览器向跨源服务器，发出XMLHttpRequest请求，从而克服了AJAX只能同源使用的限制。
+本质：浏览器再向跨源服务器发送请的时候会夹带一个
