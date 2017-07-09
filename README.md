@@ -1,9 +1,11 @@
 ## 跨域的三种方式：
 本文通过三种方式实现跨域，由node.js搭建静态服务器，通过修改host文件的本地地址来实现不同源策略，上面三部分代码分别为各个方式的源码
+
 ```
   127.0.0.1    a.com
   127.0.0.1    b.com
 ```
+
 ### 方式一： postMessage
 postMessage是HTML5引入的新API：跨文档通信API（Cross-document messaging）；
 此API对象新增了一个`window.postMessage`方法，允许跨窗口通信，无论是否同源；
@@ -46,6 +48,7 @@ JSONP是服务器与客户端跨源通信的常用方法。最大特点就是简
 ### 方式三：CORS
 CORS是一个W3C标准，全称是"跨域资源共享"（Cross-origin resource sharing）。
 它允许浏览器向跨源服务器，发出XMLHttpRequest请求，从而克服了AJAX只能同源使用的限制。
+
 #### 本质：
 1. 浏览器再向跨源服务器发送请的时候会夹带一个一个`origin`字段标明请求方的地址
 
@@ -60,10 +63,12 @@ Origin: http://a.com:8888  //夹带的origin头信息，表明身份
 ```
 
 2. 但服务器接收的此请求后看到对方夹带的origin信息，这个地址我允许它请求我的数据，所以服务端对此地址进行了友好处理
+
 ```
 response.setHeader('Access-Control-Allow-Origin', 'http://a.com:8888');  // 对'http://a.com:8888'此地址放行
 
 ```
+
 3.浏览器看到`Access-Control-Allow-Origin: http://a.com:8888`后，就认可此操作合法；
 
 ![image](https://user-images.githubusercontent.com/24493052/27994647-821fbec6-64f4-11e7-9308-f40426687956.png)
