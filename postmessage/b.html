@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		html, body {
+			margin: 0;
+		}
+		input {
+			margin: 20px;
+			width: 200px;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" placeholder="http://b.com:8888">
+
+	<script>
+		var ipt = document.querySelector('input')
+		ipt.addEventListener('input', function (){
+			window.parent.postMessage(this.value, '*')
+		})
+
+		window.addEventListener('message', function(e){
+			ipt.value = e.data
+		})
+	</script>
+</body>
+</html>

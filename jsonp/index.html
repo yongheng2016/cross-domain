@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>跨域 JSONP</title>
+</head>
+<body>
+	<script>
+		var script = document.createElement('script')
+		script.setAttribute('src', '/main.js?backcall=functionName')
+		document.body.appendChild(script)
+	</script>
+	<script>
+		function functionName(){
+			console.log(arguments[0])
+		}
+	</script>
+</body>
+</html>

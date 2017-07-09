@@ -1,0 +1,1 @@
+console.log('我是main.js的内容')
