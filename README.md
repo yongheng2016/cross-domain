@@ -28,3 +28,11 @@ xxx.postMessage('input.value','接收消息的origin')
 ![image](https://user-images.githubusercontent.com/24493052/27994322-13f00592-64ee-11e7-8d8f-cee6fe11487c.png)
 
 2. 父窗口和子窗口分别通过监听message事件event.data来获取消息内容，对自己的input.value进行同步操作
+
+```
+window.addEventListener('message', function (e){
+			ipt.value = e.data	
+		})
+```
+
+### 方式二：JSONP
