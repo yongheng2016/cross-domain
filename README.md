@@ -73,6 +73,18 @@ response.setHeader('Access-Control-Allow-Origin', 'http://a.com:8888');  // 对'
 
 ![image](https://user-images.githubusercontent.com/24493052/27994647-821fbec6-64f4-11e7-9308-f40426687956.png)
 
+### xhr.withCredentials与CORS的关系
+
+> + 发送同域请求时，浏览器会**自动**将cookie加在reuqest header中  
+> + 发送跨域请求时，浏览器并**没有**将cookie加在request header中  
+
+> --> 原因：CORS标准规定，默认情况下，浏览器发送跨域请求时，不能发送任何认证信息（credentials）
+如：`cookie`，`HTTP authentication schemes`
+
+- [x]解决方法：(下面两个条件必须同时满足)
+1. client端手动设置`xhr.withCredentials = true`
+2. server端允许requestHeader能携带认证信息，即:`Access-Contorl-Allow-Credentials: true`
++ 注意：一旦跨域request能够携带认证信息，server端一定不能将`Access-Contorl-Allow-Origin`设置为`*`，而必须设置为请求页面的域名
 ---
 
 + [阮一峰：浏览器同源政策及其规避方法](http://www.ruanyifeng.com/blog/2016/04/same-origin-policy.html)
