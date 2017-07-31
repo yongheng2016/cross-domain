@@ -87,6 +87,7 @@ response.setHeader('Access-Control-Allow-Origin', 'http://a.com:8888');  // 对'
 + 注意：一旦跨域request能够携带认证信息，server端一定不能将`Access-Contorl-Allow-Origin`设置为`*`，而必须设置为请求页面的域名
 
 参考：[https://segmentfault.com/a/1190000004322487#articleHeader13](https://segmentfault.com/a/1190000004322487#articleHeader13)
+
 ---
 
 + [阮一峰：浏览器同源政策及其规避方法](http://www.ruanyifeng.com/blog/2016/04/same-origin-policy.html)
