@@ -78,7 +78,7 @@ response.setHeader('Access-Control-Allow-Origin', 'http://a.com:8888');  // 对'
 > + 发送同域请求时，浏览器会**自动**将cookie加在reuqest header中  
 > + 发送跨域请求时，浏览器并**没有**将cookie加在request header中  
 
-> --> 原因：CORS标准规定，默认情况下，浏览器发送跨域请求时，不能发送任何认证信息（credentials）
+> 原因：CORS标准规定，默认情况下，浏览器发送跨域请求时，不能发送任何认证信息（credentials）
 如：`cookie`，`HTTP authentication schemes`
 
 - [x]解决方法：(下面两个条件必须同时满足)
