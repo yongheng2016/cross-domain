@@ -73,7 +73,7 @@ response.setHeader('Access-Control-Allow-Origin', 'http://a.com:8888');  // 对'
 
 ![image](https://user-images.githubusercontent.com/24493052/27994647-821fbec6-64f4-11e7-9308-f40426687956.png)
 
-### xhr.withCredentials与CORS的关系
+### `xhr.withCredentials`与CORS的关系
 
 > + 发送同域请求时，浏览器会**自动**将cookie加在reuqest header中  
 > + 发送跨域请求时，浏览器并**没有**将cookie加在request header中  
